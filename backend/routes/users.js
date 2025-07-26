@@ -23,7 +23,7 @@ router.post('/register', async (req, res) => {
   }
 });
 
-// Nuevo endpoint para listar usuarios (AÑADE ESTO)
+// Nuevo endpoint para listar usuarios 
 router.get('/list', async (req, res) => {
   try {
     // Excluimos el password por seguridad
