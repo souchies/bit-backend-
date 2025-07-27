@@ -2,7 +2,7 @@ const express = require('express');
 const router = express.Router();
 const Perfume = require('../models/Perfume');
 
-// Obtener todos los perfumes
+// All perfumes
 router.get('/', async (req, res) => {
   try {
     const perfumes = await Perfume.find();
@@ -12,7 +12,7 @@ router.get('/', async (req, res) => {
   }
 });
 
-// Crear un nuevo perfume
+// Crear 
 router.post('/', async (req, res) => {
   try {
     const nuevoPerfume = new Perfume(req.body);
@@ -23,7 +23,7 @@ router.post('/', async (req, res) => {
   }
 });
 
-// Crear múltiples perfumes (bulk insert)
+// Varios perfumes
 router.post('/bulk', async (req, res) => {
   try {
     if (!Array.isArray(req.body)) {

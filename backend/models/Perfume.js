@@ -1,12 +1,14 @@
 const mongoose = require('mongoose');
 
-const PerfumeSchema = new mongoose.Schema({
+const perfumeSchema = new mongoose.Schema({
   nombre: { type: String, required: true },
+  marca: { type: String },
   aroma: { type: String, required: true },
-  precio: { type: Number, required: true },
-  imagen: { type: String }, // URL de la imagen
-  stock: { type: Number, required: true },
   descripcion: { type: String },
-}, { timestamps: true });
+  precio: { type: Number, required: true },
+  stock: { type: Number, required: true }
+});
 
-module.exports = mongoose.model('Perfume', PerfumeSchema); 
+module.exports = mongoose.model('Perfume', perfumeSchema);
+
+/* imagen: { type: String }, // URL de la imagen */
